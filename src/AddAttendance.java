@@ -40,7 +40,10 @@ public class AddAttendance {
 		x.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				System.exit(0);
+				int option = JOptionPane.showConfirmDialog(frame, "Are you sure you want to exit?", "Exit Confirmation", JOptionPane.YES_NO_OPTION);
+				if (option == JOptionPane.YES_OPTION) {
+					System.exit(0); 
+				}
 			}
 		});
 		//----------------------------------------------------------
